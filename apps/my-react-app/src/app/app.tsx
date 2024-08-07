@@ -5,6 +5,7 @@ import styles from './app.module.css';
 // import NxWelcome from './nx-welcome';
 
 import { UiShared } from '@nx-react-workspace/ui-shared';
+import { uppercase } from '@nx-react-workspace/utils';
 
 export function App() {
   const [greeting, setGreeting] = useState('');
@@ -20,7 +21,7 @@ export function App() {
   return (
     <div>
       <div>{greeting}</div>
-      <UiShared parent='my-react-app' />
+      <UiShared parent={uppercase('my-react-app')} />
       
       {/* <NxWelcome title="my-react-app" /> */}
     </div>
