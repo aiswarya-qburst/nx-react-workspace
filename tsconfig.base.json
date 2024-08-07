@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-react-workspace/ui-shared": ["ui-shared/src/index.ts"]
+      "@nx-react-workspace/ui-shared": ["./libs/ui-shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

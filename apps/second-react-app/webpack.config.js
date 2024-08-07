@@ -4,16 +4,10 @@ const { join } = require('path');
 
 module.exports = {
   output: {
-    path: join(__dirname, '../../dist/apps/my-react-app'),
+    path: join(__dirname, '../../dist/apps/second-react-app'),
   },
   devServer: {
-    port: 4200,
-    proxy: {
-      '/api': {
-         "target": 'http://localhost:3000',
-         "changeOrigin": true
-      }
-   }
+    port: 4201,
   },
   plugins: [
     new NxAppWebpackPlugin({

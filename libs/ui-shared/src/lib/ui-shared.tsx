@@ -1,9 +1,13 @@
 import styles from './ui-shared.module.css';
 
-export function UiShared() {
+interface Props {
+  parent: string;
+}
+
+export function UiShared(props: Props) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to UiShared!</h1>
+      <h1>Called from {props.parent}</h1>
     </div>
   );
 }
