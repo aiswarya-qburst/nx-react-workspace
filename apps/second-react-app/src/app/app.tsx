@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 
 export function App() {
   const [greeting, setGreeting] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     fetch('/api/second')
@@ -16,11 +17,18 @@ export function App() {
       .then((text) => JSON.parse(text).message)
       .then(setGreeting)
       .catch((err) => console.error(err));
+
+    fetch('/second-api')
+    .then((res) => res.text())
+    .then((text) => JSON.parse(text).message)
+    .then(setMessage)
+    .catch((err) => console.error(err))
   }, []);
 
   return (
     <div>
       <div>{greeting}</div>
+      <div>{message}</div>
       <UiShared parent={add('second-react-app')} />
       {/* <NxWelcome title="second-react-app" /> */}
     </div>

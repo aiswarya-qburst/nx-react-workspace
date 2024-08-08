@@ -12,6 +12,10 @@ module.exports = {
       '/api': {
          "target": 'http://localhost:3000',
          "changeOrigin": true
+      },
+      '/express-api': {
+         "target": 'http://localhost:3333',
+         "changeOrigin": true
       }
     }
   },

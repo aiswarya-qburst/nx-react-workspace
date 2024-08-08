@@ -12,6 +12,10 @@ module.exports = {
       '/api': {
          "target": 'http://localhost:3000',
          "changeOrigin": true
+      },
+      '/second-api': {
+         "target": 'http://localhost:3330',
+         "changeOrigin": true
       }
     }
   },

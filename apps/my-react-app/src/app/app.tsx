@@ -9,6 +9,7 @@ import { uppercase } from '@nx-react-workspace/utils';
 
 export function App() {
   const [greeting, setGreeting] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     fetch('/api/first')
@@ -16,11 +17,17 @@ export function App() {
       .then((text) => JSON.parse(text).message)
       .then(setGreeting)
       .catch((err) => console.error(err));
+    fetch('/express-api')
+      .then((res) => res.text())
+      .then((text) => JSON.parse(text).message)
+      .then(setMessage)
+      .catch((err) => console.error(err))
   }, []);
 
   return (
     <div>
       <div>{greeting}</div>
+      <div>{message}</div>
       <UiShared parent={uppercase('my-react-app')} />
       
       {/* <NxWelcome title="my-react-app" /> */}
