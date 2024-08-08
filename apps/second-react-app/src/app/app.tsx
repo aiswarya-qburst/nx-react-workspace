@@ -5,10 +5,22 @@ import styles from './app.module.css';
 
 import { UiShared } from '@nx-react-workspace/ui-shared';
 import { add } from '@nx-react-workspace/utils';
+import { useEffect, useState } from 'react';
 
 export function App() {
+  const [greeting, setGreeting] = useState('');
+
+  useEffect(() => {
+    fetch('/api/second')
+      .then((res) => res.text())
+      .then((text) => JSON.parse(text).message)
+      .then(setGreeting)
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div>
+      <div>{greeting}</div>
       <UiShared parent={add('second-react-app')} />
       {/* <NxWelcome title="second-react-app" /> */}
     </div>
