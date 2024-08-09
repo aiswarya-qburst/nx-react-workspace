@@ -7,6 +7,9 @@ import styles from './app.module.css';
 import { UiShared } from '@nx-react-workspace/ui-shared';
 import { uppercase } from '@nx-react-workspace/utils';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { Button } from '@nx-react-workspace/shared-app';
+
 export function App() {
   const [greeting, setGreeting] = useState('');
   const [message, setMessage] = useState('');
@@ -28,6 +31,7 @@ export function App() {
     <div>
       <div>{greeting}</div>
       <div>{message}</div>
+      <Button />
       <UiShared parent={uppercase('my-react-app')} />
       
       {/* <NxWelcome title="my-react-app" /> */}

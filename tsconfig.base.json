@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx-react-workspace/ui-shared": ["./libs/ui-shared/src/index.ts"],
-      "@nx-react-workspace/utils": ["libs/utils/src/index.ts"]
+      "@nx-react-workspace/utils": ["libs/utils/src/index.ts"],
+      "@nx-react-workspace/shared-app": ["apps/shared-app/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
