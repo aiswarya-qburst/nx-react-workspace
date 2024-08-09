@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { uppercase } from '@nx-react-workspace/utils';
+import { uppercase, add } from '@nx-react-workspace/utils';
 
 @Injectable()
 export class AppService {
@@ -9,6 +9,6 @@ export class AppService {
   }
 
   getSecondData(): { message: string } {
-    return { message: 'Hello Second!' };
+    return { message: add('Hello Second!') };
   }
 }
