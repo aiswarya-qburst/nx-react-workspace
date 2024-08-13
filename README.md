@@ -10,13 +10,67 @@ Enhance your Nx experience by installing [Nx Console](https://nx.dev/nx-console)
 provides an interactive UI to view your projects, run tasks, generate code, and more! Available for VSCode, IntelliJ and
 comes with a LSP for Vim users.
 
+## Setting up workspace
+
+### To create an Nx workspace do
+```
+$ npx create-nx-workspace
+```
+
+### To create a library:
+
+#### React
+```
+$ nx g @nx/react:library ui-shared
+```
+#### Js
+```
+$ npx nx g @nx/js:lib utils
+```
+
+### To create a NestJS application
+```
+$ nx g @nx/nest:app my-nest-app
+```
+
+### To create a Express application
+```
+$ nx g @nx/express:app my-express-api
+```
+
+### To create a React Native application
+```
+$ nx add @nx/react-native
+$ npx nx g @nx/react-native:app mobile
+```
+
+When creating applications, you can specify where the application needs to be created using --directory=`path/<app name>`. If not specified, you will be prompted to choose a path to create the app.
+
+## Storybook
+```
+$ nx g @nx/storybook:configuration shared-app
+```
+
+### Adding story to new component
+```
+$ nx g @nx/react:component header
+$ nx g @nx/react:stories --project=shared-app
+```
+
+### To start
+```
+$ nx storybook shared-app
+```
+
+Note: stories.tsx files will be added only within /apps folder
+
 ## Start the application
 
-Run `npx nx serve my-react-app` to start the development server. Happy coding!
+Run `npx nx serve <app name>` to start the development server. Happy coding!
 
 ## Build for production
 
-Run `npx nx build my-react-app` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
+Run `npx nx build <app name>` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
 
 ## Running tasks
 
