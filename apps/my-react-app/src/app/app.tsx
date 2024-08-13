@@ -8,7 +8,7 @@ import { UiShared } from '@nx-react-workspace/ui-shared';
 import { uppercase } from '@nx-react-workspace/utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { Button } from '@nx-react-workspace/shared-app';
+import { Button, Header } from '@nx-react-workspace/shared-app';
 
 export function App() {
   const [greeting, setGreeting] = useState('');
@@ -29,6 +29,7 @@ export function App() {
 
   return (
     <div>
+      <Header />
       <div>{greeting}</div>
       <div>{message}</div>
       <Button />
