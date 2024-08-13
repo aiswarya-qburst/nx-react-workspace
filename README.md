@@ -14,52 +14,52 @@ comes with a LSP for Vim users.
 
 ### To create an Nx workspace do
 ```
-$ npx create-nx-workspace
+npx create-nx-workspace
 ```
 
 ### To create a library:
 
 #### React
 ```
-$ nx g @nx/react:library ui-shared
+nx g @nx/react:library ui-shared
 ```
 #### Js
 ```
-$ npx nx g @nx/js:lib utils
+nx g @nx/js:lib utils
 ```
 
 ### To create a NestJS application
 ```
-$ nx g @nx/nest:app my-nest-app
+nx g @nx/nest:app my-nest-app
 ```
 
 ### To create a Express application
 ```
-$ nx g @nx/express:app my-express-api
+nx g @nx/express:app my-express-api
 ```
 
 ### To create a React Native application
 ```
-$ nx add @nx/react-native
-$ npx nx g @nx/react-native:app mobile
+nx add @nx/react-native
+nx g @nx/react-native:app mobile
 ```
 
 When creating applications, you can specify where the application needs to be created using --directory=`path/<app name>`. If not specified, you will be prompted to choose a path to create the app.
 
 ## Storybook
 ```
-$ nx g @nx/storybook:configuration shared-app
+nx g @nx/storybook:configuration shared-app
 ```
 
 ### Adding story to new component
 ```
-$ nx g @nx/react:component header
-$ nx g @nx/react:stories --project=shared-app
+nx g @nx/react:component header
+nx g @nx/react:stories --project=shared-app
 ```
 
 ### To start
 ```
-$ nx storybook shared-app
+nx storybook shared-app
 ```
 
 Note: stories.tsx files will be added only within /apps folder
