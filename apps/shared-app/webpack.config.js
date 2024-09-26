@@ -8,6 +8,7 @@ module.exports = {
   },
   devServer: {
     port: 4202,
+    historyApiFallback: true,
   },
   plugins: [
     new NxAppWebpackPlugin({

@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-react-workspace/shared-app": ["apps/shared-app/src/index.ts"],
+      "@nx-react-workspace/router-shared": ["libs/router-shared/src/index.ts"],
+      "@nx-react-workspace/shared-app": ["apps/shared-app/src/app/app.tsx"],
+      "@nx-react-workspace/shared-components": ["apps/shared-app/src/index.ts"],
       "@nx-react-workspace/ui-shared": ["./libs/ui-shared/src/index.ts"],
       "@nx-react-workspace/utils": ["libs/utils/src/index.ts"]
     }

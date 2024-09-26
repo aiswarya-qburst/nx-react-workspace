@@ -17,7 +17,8 @@ module.exports = {
          "target": 'http://localhost:3333',
          "changeOrigin": true
       }
-    }
+    },
+    historyApiFallback: true,
   },
   plugins: [
     new NxAppWebpackPlugin({

@@ -7,6 +7,9 @@ import { UiShared } from '@nx-react-workspace/ui-shared';
 import { add } from '@nx-react-workspace/utils';
 import { useEffect, useState } from 'react';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { Button, Header } from '@nx-react-workspace/shared-components';
+
 export function App() {
   const [greeting, setGreeting] = useState('');
   const [message, setMessage] = useState('');
@@ -30,7 +33,8 @@ export function App() {
       <div>{greeting}</div>
       <div>{message}</div>
       <UiShared parent={add('second-react-app')} />
-      {/* <NxWelcome title="second-react-app" /> */}
+      <Button str='second react app btn' />
+      <Header />
     </div>
   );
 }
